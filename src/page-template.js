@@ -1,7 +1,7 @@
 // create the about section
 const generateAbout = (aboutText) => {
   if (!aboutText) {
-    return "";
+    return '';
   }
 
   return `
@@ -32,7 +32,7 @@ const generateProjects = (projectsArr) => {
               </div>
             `;
             })
-            .join("")}
+            .join('')}
     
           ${projectsArr
             .filter(({ feature }) => !feature)
@@ -42,14 +42,14 @@ const generateProjects = (projectsArr) => {
                 <h3 class="portfolio-item-title text-light">${name}</h3>
                 <h5 class="portfolio-languages">
                   Built With:
-                  ${languages.join(", ")}
+                  ${languages.join(', ')}
                 </h5>
                 <p>${description}</p>
                 <a href="${link}" class="btn mt-auto"><i class="fab fa-github mr-2"></i>View Project on GitHub</a>
               </div>
             `;
             })
-            .join("")}
+            .join('')}
           </div>
         </section>
       `;
@@ -91,9 +91,7 @@ module.exports = (templateData) => {
         ${generateProjects(projects)}
       </main>
       <footer class="container text-center py-3">
-        <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${
-    header.name
-  }</h3>
+        <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name}</h3>
       </footer>
     </body>
     </html>
